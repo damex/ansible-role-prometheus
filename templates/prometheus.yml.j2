@@ -1,0 +1,11 @@
+# {{ ansible_managed }}
+global:
+  {{ prometheus_global | to_nice_yaml | indent(2) }}
+{%- if prometheus_external_labels | length %}
+  external_labels:
+    {{ prometheus_external_labels | to_nice_yaml | indent(4) }}
+{%- endif -%}
+{%- if prometheus_scrape_configs | length -%}
+scrape_configs:
+  {{ prometheus_scrape_configs | to_nice_yaml | indent(2) }}
+{%- endif -%}
