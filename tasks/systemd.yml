@@ -1,0 +1,7 @@
+---
+- name: ensure systemd service
+  include_role:
+    name: "damex.systemd_service"
+  vars:
+    systemd_service_name: "{{ prometheus_service_name }}"
+    systemd_service_restart_on: "{{ prometheus_conf.changed }}"

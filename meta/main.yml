@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  role_name: prometheus
+  author: Roman Kuzmitskii
+  description: prometheus role
+  license: GPLv2
+  min_ansible_version: 2.9
+  galaxy_tags:
+    - metrics
+    - monitoring
+    - prometheus
+    - system
+  platforms:
+    - name: "Debian"
+      versions:
+        - "buster"
+    - name: "Ubuntu"
+      versions:
+        - "focal"
+dependencies:
+  - role: "damex.package"
+  - role: "damex.systemd_service"

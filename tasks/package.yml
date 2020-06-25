@@ -1,0 +1,8 @@
+---
+- name: ensure prometheus package
+  include_role:
+    name: "damex.package"
+  vars:
+    package_packages:
+      - name: "{{ prometheus_package_name }}"
+        state: "{{ prometheus_package_state }}"

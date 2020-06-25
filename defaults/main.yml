@@ -1,0 +1,12 @@
+---
+prometheus_package_name: "prometheus"
+prometheus_package_state: "present"
+prometheus_service_name: "prometheus"
+prometheus_conf_dir: "/etc/prometheus"
+prometheus_conf_file: "{{ prometheus_conf_dir }}/prometheus.yml"
+prometheus_global:
+  scrape_interval: 60s
+  scrape_timeout: 5s
+  evaluation_interval: 60s
+prometheus_external_labels: []
+prometheus_scrape_configs: []
